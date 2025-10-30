@@ -1,2 +1,2 @@
 # dl_model_classification_finetune
-Meilenstein 1, Finetune von CNN und ViT
+Milestone 1, Finetune of CNN and ViT
