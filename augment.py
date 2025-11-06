@@ -17,14 +17,14 @@ transform_augment_loss = transforms.Compose([
     transforms.PILToTensor(),
     transforms.Resize((224, 224)),
     transforms.RandomChoice(
-        [transforms.RandomHorizontalFlip(p=0.3),
-        transforms.RandomVerticalFlip(p=0.3)]
+        [transforms.RandomHorizontalFlip(p=0.5),
+        transforms.RandomVerticalFlip(p=0.5)]
     ),
-    transforms.RandomGrayscale(p=0.3),
-    transforms.RandomErasing(p=0.3, scale=(0.02, 0.1),ratio=(1,1)),
+    transforms.RandomGrayscale(p=0.5),
+    transforms.RandomErasing(p=0.5, scale=(0.02, 0.1),ratio=(1,1)),
     transforms.RandomApply([
         transforms.RandomRotation(degrees=20),],
-        p=0.3
+        p=0.5
     ),
     transforms.ToPILImage(),
 ])
@@ -34,17 +34,17 @@ transform_augment_blur = transforms.Compose([
     transforms.PILToTensor(),
     transforms.Resize((224, 224)),
     transforms.RandomChoice(
-        [transforms.RandomHorizontalFlip(p=0.3),
-        transforms.RandomVerticalFlip(p=0.3)]
+        [transforms.RandomHorizontalFlip(p=0.5),
+        transforms.RandomVerticalFlip(p=0.5)]
     ),
     transforms.RandomApply([
-        transforms.ColorJitter((0, 0.2), (0, 0.2), (0, 0.2), (0, 0.2)),
-    ], p=0.3),
+        transforms.ColorJitter((0.1, 0.2), (0.1, 0.2), (0.1, 0.2), (0.1, 0.2)),
+    ], p=0.5),
     transforms.RandomApply([transforms.ElasticTransform(alpha=(50.0, 250.0), sigma=(5.0, 15.0))],
-                           p=0.3),
+                           p=0.5),
     transforms.RandomApply([
         transforms.RandomRotation(degrees=20),
-    ], p=0.3),
+    ], p=0.5),
     
     transforms.ToPILImage(),
 ])
