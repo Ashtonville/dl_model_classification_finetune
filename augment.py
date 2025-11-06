@@ -7,8 +7,8 @@ from os.path import isfile, join, isdir
 root_dir = "./data/train/"
 csv_file = "./data/train.csv"
 
-new_root_dir = "./new_train/"
-new_csv_file = "./new_train/train.csv"
+new_root_dir = "data/aug_train/"
+new_csv_file = "data/aug_train.csv"
 
 transform_resize = transforms.Compose([transforms.Resize((224,224)),])
 
