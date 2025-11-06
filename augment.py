@@ -12,9 +12,6 @@ new_csv_file = "./new_train/train.csv"
 
 transform_resize = transforms.Compose([transforms.Resize((224,224)),])
 
-# 1Transform: H/V Flips, Erasing
-# 2Transform: Rotation, ColorJitter
-
 #AUGMENTATION LOSS
 transform_augment_loss = transforms.Compose([
     transforms.PILToTensor(),
