@@ -1,0 +1,47 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ruff Cache
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Environment files
+.env
+
+# Editor / IDE
+.vscode/
+.idea/
+
+# Test & tooling caches
+.pytest_cache/
+.mypy_cache/
+
+# Coverage reports
+.coverage
+htmlcov/
+
+# Distribution / build
+build/
+dist/
+*.egg-info/
+*.whl
+
+# Logs and runtime files
+*.log
+
+# Tests
+/tests
+
+# Jupyter
+.ipynb_checkpoints
+
+# OS files
+.DS_Store
+Thumbs.db
