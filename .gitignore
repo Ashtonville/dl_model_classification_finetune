@@ -8,6 +8,7 @@ __pycache__/
 *.jpg
 *.csv
 *.txt
+*.pth
 
 # IDE Specific
 .vs
