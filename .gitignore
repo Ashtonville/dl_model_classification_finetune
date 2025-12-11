@@ -9,6 +9,10 @@ __pycache__/
 *.csv
 *.txt
 
+# IDE Specific
+.vs
+workspace*
+
 # Ruff Cache
 .ruff_cache/
 
