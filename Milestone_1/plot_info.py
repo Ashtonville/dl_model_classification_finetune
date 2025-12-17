@@ -111,7 +111,10 @@ def plot_info(log_dir):
         plt.ylabel("Accuracy")
         plt.suptitle(f"{model} Epoch Validation Accuracy{' using CutMix' if cutmix else ''}", fontsize=14)
         plt.title(f"Batch size: {batch_size}, Learning rate: {learning_rate}", fontsize=10)
-        plt.ylim(70,100)
+        plt.ylim(0,70)
         plt.grid(True)
         plt.savefig(os.path.join(log_dir, f'epoch_val_accuracy_close_{model}_{batch_size}_{"_cutix" if cutmix else ""}.png'))
         plt.show()
+
+if __name__ == "__main__":
+    plot_info(r"C:\Users\nikla\Desktop\dl_model_classification_finetune\ml2_results\vit_old")
