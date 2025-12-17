@@ -32,7 +32,7 @@ class TemperatureMultiheadAttention(MultiheadAttention):
         attn_scores = torch.matmul(q, k.transpose(-2, -1))
         attn_scores /= math.sqrt(head_dim)
 
-        # set temperature default to 1
+        # reshape temperature
         temp = self.temperature.view(1, -1, 1, 1)
 
         # apply temperature to attn_scors / softmax function
